@@ -1,0 +1,197 @@
+    /* CSS Variables (criterion 11) */
+    :root {
+        --main-red: #6b0f0f;
+        /* deep, not flashy red for Canada vibe */
+        --accent-red: #8a1b1b;
+        /* accent red for hovers */
+        --snow: #ffffff;
+        --ink: #111111;
+        --muted-ink: #444444;
+        --radius-xl: 1.25rem;
+    }
+
+    /* Responsive Typography with clamp and relative units (criteria 18, 19) */
+    html {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+        line-height: 1.2;
+        color: var(--main-red);
+        font-weight: 800;
+    }
+
+    h2,
+    h3 {
+        color: var(--main-red);
+    }
+
+    body {
+        color: var(--ink);
+    }
+
+    /* CSS Selector Grouping + Chaining (criteria 6, 7) */
+    h1,
+    h2,
+    h3 {
+        letter-spacing: 0.01em;
+    }
+
+    header.sticky nav a {
+        text-decoration: none;
+    }
+
+    /* Advanced CSS Selectors: attribute selector, combinators, etc. (criterion 5) */
+    nav a[href^="#"] {
+        /* highlights in-page anchors */
+        position: relative;
+    }
+
+    main>section+section {
+        /* spacing only when a section follows another section */
+        margin-top: 4rem;
+    }
+
+    .prose>p+p {
+        /* adjacent sibling combinator for paragraphs inside prose blocks */
+        margin-top: 0.75rem;
+    }
+
+    /* Pseudo-elements (criterion 15): underline bar for section titles */
+    .section-title {
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 4.5rem;
+        height: 0.25rem;
+        background: var(--main-red);
+        border-radius: 9999px;
+    }
+
+    /* Keyframe Animations (criterion 14): subtle aurora gradient banner */
+    @keyframes aurora {
+        0% {
+            background-position: 0% 50%;
+            filter: saturate(0.9) brightness(1);
+        }
+
+        25% {
+            background-position: 50% 50%;
+            filter: saturate(1) brightness(1.05);
+        }
+
+        50% {
+            background-position: 100% 50%;
+            filter: saturate(1.05) brightness(1.1);
+        }
+
+        75% {
+            background-position: 50% 50%;
+            filter: saturate(1) brightness(1.05);
+        }
+
+        100% {
+            background-position: 0% 50%;
+            filter: saturate(0.9) brightness(1);
+        }
+    }
+
+    .aurora {
+        background: linear-gradient(120deg, var(--main-red), #b91c1c, #991b1b, #6b0f0f);
+        background-size: 300% 300%;
+        animation: aurora 14s ease-in-out infinite;
+    }
+
+    /* Transitions (criterion 13) */
+    .btn {
+        transition: background-color 200ms ease, transform 150ms ease, box-shadow 200ms ease;
+    }
+
+    .btn:hover {
+        background-color: var(--accent-red);
+        transform: translateY(-1px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card {
+        transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Absolute & Relative Positioning (criteria 8, 9) */
+    .badge {
+        position: absolute;
+        /* absolute */
+        top: 0.75rem;
+        right: 0.75rem;
+        background: var(--main-red);
+        color: var(--snow);
+        padding: 0.25rem 0.5rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+
+    .relative-wrap {
+        position: relative;
+        /* relative container for badges, ornaments, etc. */
+    }
+
+    /* Fixed Positioning (criterion 10) */
+    .back-to-top {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        background: var(--main-red);
+        color: var(--snow);
+        border-radius: 9999px;
+        padding: 0.75rem 1rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        z-index: 50;
+        opacity: 0.95;
+        transition: opacity 150ms ease;
+    }
+
+    .back-to-top:hover {
+        opacity: 1;
+    }
+
+    /* Flexible Images CSS (criterion 17) + maintain aspect ratio */
+    img.responsive {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* CSS Media Queries (criterion 12) */
+    @media (min-width: 640px) {
+
+        /* phone -> tablet */
+        :root {
+            --radius-xl: 1.5rem;
+        }
+
+        .lead {
+            font-size: 1.05rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        /* tablet -> PC */
+        .lead {
+            font-size: 1.125rem;
+        }
+    }
