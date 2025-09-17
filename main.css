@@ -1,16 +1,12 @@
-    /* CSS Variables (criterion 11) */
     :root {
         --main-red: #6b0f0f;
-        /* deep, not flashy red for Canada vibe */
         --accent-red: #8a1b1b;
-        /* accent red for hovers */
         --snow: #ffffff;
         --ink: #111111;
         --muted-ink: #444444;
         --radius-xl: 1.25rem;
     }
 
-    /* Responsive Typography with clamp and relative units (criteria 18, 19) */
     html {
         font-size: 16px;
     }
@@ -31,7 +27,6 @@
         color: var(--ink);
     }
 
-    /* CSS Selector Grouping + Chaining (criteria 6, 7) */
     h1,
     h2,
     h3 {
@@ -42,9 +37,7 @@
         text-decoration: none;
     }
 
-    /* Advanced CSS Selectors: attribute selector, combinators, etc. (criterion 5) */
     nav a[href^="#"] {
-        /* highlights in-page anchors */
         position: relative;
     }
 
@@ -58,7 +51,6 @@
         margin-top: 0.75rem;
     }
 
-    /* Pseudo-elements (criterion 15): underline bar for section titles */
     .section-title {
         position: relative;
         padding-bottom: 0.5rem;
@@ -75,7 +67,6 @@
         border-radius: 9999px;
     }
 
-    /* Keyframe Animations (criterion 14): subtle aurora gradient banner */
     @keyframes aurora {
         0% {
             background-position: 0% 50%;
@@ -109,7 +100,6 @@
         animation: aurora 14s ease-in-out infinite;
     }
 
-    /* Transitions (criterion 13) */
     .btn {
         transition: background-color 200ms ease, transform 150ms ease, box-shadow 200ms ease;
     }
@@ -129,10 +119,8 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
 
-    /* Absolute & Relative Positioning (criteria 8, 9) */
     .badge {
         position: absolute;
-        /* absolute */
         top: 0.75rem;
         right: 0.75rem;
         background: var(--main-red);
@@ -145,10 +133,8 @@
 
     .relative-wrap {
         position: relative;
-        /* relative container for badges, ornaments, etc. */
     }
 
-    /* Fixed Positioning (criterion 10) */
     .back-to-top {
         position: fixed;
         right: 1rem;
@@ -167,7 +153,6 @@
         opacity: 1;
     }
 
-    /* Flexible Images CSS (criterion 17) + maintain aspect ratio */
     img.responsive {
         display: block;
         width: 100%;
@@ -175,7 +160,6 @@
         object-fit: cover;
     }
 
-    /* CSS Media Queries (criterion 12) */
     @media (min-width: 640px) {
 
         /* phone -> tablet */

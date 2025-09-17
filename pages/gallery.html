@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Meta & basic setup -->
   <meta charset="utf-8" />
@@ -10,10 +11,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../main.css" />
 </head>
+
 <body class="bg-white text-[var(--ink)] antialiased">
 
-  <!-- [EN] Header with red background -->
-  <header class="aurora">
+  <!--  Header with red background -->
+  <header class="aurora" aria-label="site header">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="../index.html" class="flex items-center gap-2">
         <span class="inline-block w-8 h-8 rounded-full bg-white"></span>
@@ -28,52 +30,94 @@
     </div>
   </header>
 
-  <!-- [EN] Gallery section -->
-  <main class="max-w-6xl mx-auto px-4 py-12">
-    <h1 class="section-title text-2xl md:text-3xl font-extrabold text-white bg-[var(--main-red)] inline-block px-3 py-1 rounded">
+  <!--  Gallery section -->
+  <main class="max-w-6xl mx-auto px-4 py-12" aria-label="gallery main content">
+    <h1
+      class="section-title text-2xl md:text-3xl font-extrabold text-white bg-[var(--main-red)] inline-block px-3 py-1 rounded">
       Gallery
     </h1>
-    <p class="mt-4 text-[var(--muted-ink)]">Drop in your own images below. All items are responsive and lazy-loaded.</p>
 
-    <!-- [EN] Responsive image gallery grid -->
+    <!--  Responsive image gallery grid -->
     <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-      <!-- [EN] Image placeholders -->
+      <!--  Image placeholders -->
       <figure class="rounded-lg overflow-hidden ring-1 ring-red-100">
-        <img class="responsive" src="../assets/imgs/180581246-winter-park-with-snow-and-view-of-a-downtown-of-vancouver-bc-canada-in-the-background-during-sunset.jpg" alt="winter gallery image 1" loading="lazy" />
+        <img class="responsive"
+          srcset="../assets/imgs/180581246-winter-park-with-snow-and-view-of-a-downtown-of-vancouver-bc-canada-in-the-background-during-sunset.jpg 500w,
+            ../assets/imgs/180581246-winter-park-with-snow-and-view-of-a-downtown-of-vancouver-bc-canada-in-the-background-during-sunset.jpg 1000w,
+            ../assets/imgs/180581246-winter-park-with-snow-and-view-of-a-downtown-of-vancouver-bc-canada-in-the-background-during-sunset.jpg 2000w"
+          src="../assets/imgs/180581246-winter-park-with-snow-and-view-of-a-downtown-of-vancouver-bc-canada-in-the-background-during-sunset.jpg"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="winter gallery image 1"
+          loading="lazy" />
       </figure>
+
       <figure class="rounded-lg overflow-hidden ring-1 ring-red-100">
-        <img class="responsive" src="../assets/imgs/CanyonLights-Gallery-02-1-856x514.jpg" alt="winter gallery image 2" loading="lazy" />
+        <img class="responsive" srcset="../assets/imgs/CanyonLights-Gallery-02-1-856x514.jpg 500w,
+            ../assets/imgs/CanyonLights-Gallery-02-1-856x514.jpg 1000w,
+            ../assets/imgs/CanyonLights-Gallery-02-1-856x514.jpg 2000w"
+          src="../assets/imgs/CanyonLights-Gallery-02-1-856x514.jpg"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="winter gallery image 2"
+          loading="lazy" />
       </figure>
+
       <figure class="rounded-lg overflow-hidden ring-1 ring-red-100">
-        <img class="responsive" src="../assets/imgs/Northern-Lights-Prince-George-NBC-header.webp" alt="winter gallery image 3" loading="lazy" />
+        <img class="responsive" srcset="../assets/imgs/Northern-Lights-Prince-George-NBC-header.webp 500w,
+            ../assets/imgs/Northern-Lights-Prince-George-NBC-header.webp 1000w,
+            ../assets/imgs/Northern-Lights-Prince-George-NBC-header.webp 2000w"
+          src="../assets/imgs/Northern-Lights-Prince-George-NBC-header.webp"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="winter gallery image 3"
+          loading="lazy" />
       </figure>
+
       <figure class="rounded-lg overflow-hidden ring-1 ring-red-100">
-        <img class="responsive" src="../assets/imgs/skyride-grouse-mountain.jpg" alt="winter gallery image 4" loading="lazy" />
+        <img class="responsive" srcset="../assets/imgs/skyride-grouse-mountain.jpg 500w,
+            ../assets/imgs/skyride-grouse-mountain.jpg 1000w,
+            ../assets/imgs/skyride-grouse-mountain.jpg 2000w" src="../assets/imgs/skyride-grouse-mountain.jpg"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="winter gallery image 4"
+          loading="lazy" />
       </figure>
+
       <figure class="rounded-lg overflow-hidden ring-1 ring-red-100">
-        <img class="responsive" src="../assets/imgs/waterfall-winter.jpeg" alt="winter gallery image 5" loading="lazy" />
+        <img class="responsive" srcset="../assets/imgs/waterfall-winter.jpeg 500w,
+            ../assets/imgs/waterfall-winter.jpeg 1000w,
+            ../assets/imgs/waterfall-winter.jpeg 2000w" src="../assets/imgs/waterfall-winter.jpeg"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="winter gallery image 5"
+          loading="lazy" />
       </figure>
+
       <figure class="rounded-lg overflow-hidden ring-1 ring-red-100">
-        <img class="responsive" src="../assets/imgs/victoria-winter.jpeg" alt="winter gallery image 6" loading="lazy" />
+        <img class="responsive" srcset="../assets/imgs/victoria-winter.jpeg 500w,
+            ../assets/imgs/victoria-winter.jpeg 1000w,
+            ../assets/imgs/victoria-winter.jpeg 2000w" src="../assets/imgs/victoria-winter.jpeg"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="winter gallery image 6"
+          loading="lazy" />
       </figure>
+
       <figure class="rounded-lg overflow-hidden ring-1 ring-red-100">
-        <img class="responsive" src="../assets/imgs/download.jpeg" alt="winter gallery image 7" loading="lazy" />
+        <img class="responsive" srcset="../assets/imgs/download.jpeg 500w,
+            ../assets/imgs/download.jpeg 1000w,
+            ../assets/imgs/download.jpeg 2000w" src="../assets/imgs/download.jpeg"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="winter gallery image 7"
+          loading="lazy" />
       </figure>
+
       <figure class="rounded-lg overflow-hidden ring-1 ring-red-100">
-        <img class="responsive" src="../assets/imgs/Grouse-Mountain-Peak.jpg" alt="winter gallery image 8" loading="lazy" />
+        <img class="responsive" srcset="../assets/imgs/Grouse-Mountain-Peak.jpg 500w,
+            ../assets/imgs/Grouse-Mountain-Peak.jpg 1000w,
+            ../assets/imgs/Grouse-Mountain-Peak.jpg 2000w" src="../assets/imgs/Grouse-Mountain-Peak.jpg"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="winter gallery image 8"
+          loading="lazy" />
       </figure>
+
     </div>
   </main>
 
-  <!-- [EN] Footer -->
-  <footer class="mt-16 border-t border-red-100">
+  <!--  Footer -->
+  <footer class="mt-16 border-t border-red-100" aria-label="site footer">
     <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-center text-[var(--muted-ink)]">
-      © <span id="year"></span> Winter Canada. All rights reserved.
+      © <span>2025</span> Winter Canada. All rights reserved.
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
+
 </html>

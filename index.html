@@ -8,15 +8,12 @@
     <link rel="stylesheet" href="./main.css" />
     <meta name="description"
         content="Discover outdoor fun in Canada's winter: skiing, snowboarding, Capilano & Grouse Mountain, Northern Lights, winter barbecues, and cozy sleep tips." />
-
-    <!-- Tailwind CSS Library (CSS Library criterion) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body class="bg-white text-[var(--ink)] antialiased">
-    <!-- Header & Navigation (Semantic Section Markup: header/nav - criteria 20, 21; Heading Structure: criterion 22) -->
-    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-red-100">
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-red-100" aria-label="site header">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="#" class="flex items-center gap-2">
                 <span class="inline-block w-8 h-8 rounded-full aurora"></span>
@@ -42,7 +39,6 @@
         </div>
     </header>
 
-    <!-- Hero / Aurora banner (Keyframes + Responsive Typography + Flexible Images HTML – criteria 14, 19, 16) -->
     <!--  Hero section with subtle animated aurora gradient -->
     <section class="aurora text-white">
         <div class="max-w-6xl mx-auto px-4 py-16 md:py-24">
@@ -75,8 +71,7 @@
         </div>
     </section>
 
-    <main class="max-w-6xl mx-auto px-2 py-12">
-        <!-- Outdoor (Semantic section; Subtopics; Attribute selectors target anchors; criteria 20, 21, 5) -->
+    <main class="max-w-6xl mx-auto px-2 py-12" aria-label="main content">
         <!--  Outdoor: Skiing & Snowboarding, Capilano & Grouse Mountain, Northern Lights -->
         <section id="outdoor" class="scroll-mt-24">
             <h2 class="section-title text-2xl md:text-3xl font-extrabold">Outdoor</h2>
@@ -193,13 +188,11 @@
                 <!--  Image placeholder -->
                 <figure class="relative-wrap rounded-[var(--radius-xl)] overflow-hidden card ring-1 ring-red-100">
                     <span class="badge">Cozy</span>
-                    <img class="responsive" src="" alt="cozy winter sleep placeholder" loading="lazy" />
+                    <img class="responsive" src="../final-project-winter-canada/assets/imgs/daikisleeping.jpeg" alt="cozy winter sleep placeholder" loading="lazy" />
                 </figure>
             </div>
         </section>
 
-        <!-- FAQ with accordions (criterion 28) -->
-        <!--  FAQ accordion using details/summary (native, accessible) -->
         <section id="faq" class="scroll-mt-24">
             <h2 class="section-title text-2xl md:text-3xl font-extrabold mt-16">FAQ</h2>
             <div class="mt-6 space-y-4">
@@ -233,11 +226,9 @@
             </div>
         </section>
 
-        <!-- HTML5 Form with semantic markup (criterion 4) -->
-        <!--  Contact / Plan form (semantic form with labels and inputs) -->
         <section id="contact" class="scroll-mt-24">
             <h2 class="section-title text-2xl md:text-3xl font-extrabold mt-16">Plan your winter</h2>
-            <form class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6" action="#" method="post">
+            <form class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6" action="#">
                 <div class="flex flex-col">
                     <label for="name" class="text-sm font-medium text-[var(--muted-ink)]">Full name</label>
                     <input id="name" name="name" required type="text" placeholder="Your name"
@@ -294,9 +285,7 @@
         </section>
     </main>
 
-    <!-- Footer (Semantic; links for GitHub etc.) -->
-    <!--  Git & GitHub criteria: see notes below in comments -->
-    <footer class="mt-16 border-t border-red-100">
+    <footer class="mt-16 border-t border-red-100" aria-label="footer">
         <div class="max-w-6xl mx-auto px-4 py-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
             <div>
                 <p class="font-bold text-[var(--main-red)]">Winter Canada</p>
@@ -319,25 +308,12 @@
                 </ul>
             </div>
         </div>
-        <div class="text-center text-xs text-[var(--muted-ink)] pb-8">© <span id="year"></span> Winter Canada. All
+        <div class="text-center text-xs text-[var(--muted-ink)] pb-8">© <span>2025</span> Winter Canada. All
             rights reserved.</div>
     </footer>
 
-    <a href="#" class="back-to-top hidden sm:inline-flex">↑ Top</a>
+    <a href="#" class="back-to-top hidden sm:inline-flex" aria-label="back-to-top">↑ Top</a>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const btt = document.querySelector('.back-to-top');
-        const onScroll = () => {
-            if (window.scrollY > 600) btt.classList.remove('hidden');
-            else btt.classList.add('hidden');
-        };
-        document.addEventListener('scroll', onScroll);
-    </script>
-
-    <!-- Accessibility & Validation notes (WCAG, W3C) -->
-    <!--  WCAG AAA contrast: deep red on white, near-black on white; verify with your chosen palette & text sizes (criterion 24) -->
-    <!--  W3C Validation: avoid inline errors; this file is kept simple to validate cleanly (criterion 23) -->
 </body>
 
 </html>
